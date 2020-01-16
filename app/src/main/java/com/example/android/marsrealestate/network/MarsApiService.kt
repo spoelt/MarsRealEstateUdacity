@@ -18,6 +18,7 @@
 package com.example.android.marsrealestate.network
 
 import retrofit2.Call
+import retrofit2.Callback
 import retrofit2.Retrofit
 import retrofit2.converter.scalars.ScalarsConverterFactory
 import retrofit2.http.GET
@@ -33,8 +34,7 @@ private val retrofit = Retrofit.Builder()
 // Implement the MarsApiService interface with @GET getProperties returning a String
 interface MarsApiService {
     @GET("realestate")
-    fun getProperties():
-            Call<String>
+    fun getProperties(): Call<String>
 }
 
 // Create the Mars API object using Retrofit to implement the MarsApiService
